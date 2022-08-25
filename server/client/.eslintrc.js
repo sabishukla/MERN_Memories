@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
   ],
   globals: {
     Atomics: 'readonly',
@@ -18,14 +17,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  parser: 'babel-eslint',
   plugins: [
     'react',
+    "jsx-a11y"
   ],
   rules: {
     'import/extensions': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-has-content": "off",
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'max-len': [

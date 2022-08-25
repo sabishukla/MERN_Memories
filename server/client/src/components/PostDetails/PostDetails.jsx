@@ -45,9 +45,11 @@ const Post = () => {
         <div className={classes.section}>
           <Typography variant="h3" component="h2">{post.title}</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post.tags.map((tag) => (
+            <div key={post.title} sm="4">
             <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` #${tag} `}
             </Link>
+            </div>
           ))}
           </Typography>
           <Typography gutterBottom variant="body1" component="p">{post.message}</Typography>
